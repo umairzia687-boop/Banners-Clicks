@@ -3,67 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Analytics Dashboard</title>
-    <meta http-equiv="refresh" content="45">
+    <title>Traffic Analytics Dashboard</title>
+    <meta http-equiv="refresh" content="60">
     <style>
-        body { margin: 0; padding: 0; background: #09090b; color: #e4e4e7; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; }
-        .ad-header { width: 100%; padding: 15px 0; background: #18181b; border-bottom: 1px solid #27272a; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-        .container { display: flex; width: 100%; max-width: 1400px; margin: 20px auto; gap: 15px; justify-content: center; }
-        .side-ads { width: 160px; display: flex; flex-direction: column; gap: 10px; }
-        .main-content { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .grid-300 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        .banner-card { background: #18181b; border: 1px solid #27272a; padding: 5px; border-radius: 4px; }
-        .small-ads-row { display: flex; gap: 10px; margin-top: 10px; justify-content: center; }
-        .ad-footer { width: 100%; padding: 20px 0; background: #18181b; margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
-        h3 { color: #3b82f6; margin: 5px 0; font-size: 14px; text-transform: uppercase; text-align: center; }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .status-bar {
+            background: #1e293b;
+            padding: 15px 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .safe-zone {
+            color: #22c55e;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Is container se ads aik doosre se door rahengi */
+        .ad-slot {
+            margin: 80px 0; /* Huge vertical gap to prevent accidental clicks */
+            padding: 20px;
+            background: #1e293b;
+            border-radius: 8px;
+            border: 1px dashed #475569;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        h3 { color: #64748b; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
+        
+        /* Loading indicator animation */
+        .loader {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #334155;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
 
-    <div class="ad-header">
-        <iframe data-aa='2434952' src='https://ad.a-ads.com/2434952?size=728x90' style='border:0; width:728px; height:90px;'></iframe>
-        <div class="small-ads-row">
-            <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955/?size=120x60' style='border:0; width:120px; height:60px;'></iframe>
-            <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955/?size=120x60&r=1' style='border:0; width:120px; height:60px;'></iframe>
-        </div>
+    <div class="status-bar">
+        <div class="loader"></div>
+        <span>SYSTEM STATUS: <b>COLLECTING IMPRESSIONS</b></span>
+        <div class="safe-zone">✓ ANTI-CLICK PROTECTION ACTIVE</div>
     </div>
 
-    <div class="container">
-        <div class="side-ads">
-            <iframe data-aa='2434954' src='https://ad.a-ads.com/2434954?size=160x600' style='border:0; width:160px; height:600px;'></iframe>
-            <iframe data-aa='2434954' src='https://ad.a-ads.com/2434954?size=160x600&r=2' style='border:0; width:160px; height:600px;'></iframe>
-        </div>
-
-        <div class="main-content">
-            <h3>SYSTEM STATUS: ACTIVE</h3>
-            
-            <div class="grid-300">
-                <div class="banner-card"><iframe data-aa='2434953' src='https://ad.a-ads.com/2434953?size=300x250' style='border:0; width:300px; height:250px;'></iframe></div>
-                <div class="banner-card"><iframe data-aa='2434953' src='https://ad.a-ads.com/2434953?size=300x250&r=3' style='border:0; width:300px; height:250px;'></iframe></div>
-                <div class="banner-card"><iframe data-aa='2434953' src='https://ad.a-ads.com/2434953?size=300x250&r=4' style='border:0; width:300px; height:250px;'></iframe></div>
-                <div class="banner-card"><iframe data-aa='2434953' src='https://ad.a-ads.com/2434953?size=300x250&r=5' style='border:0; width:300px; height:250px;'></iframe></div>
-            </div>
-
-            <iframe data-aa='2434952' src='https://ad.a-ads.com/2434952?size=728x90&r=6' style='border:0; width:728px; height:90px;'></iframe>
-
-            <div class="small-ads-row">
-                <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955/?size=120x60&r=7' style='border:0; width:120px; height:60px;'></iframe>
-                <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955/?size=120x60&r=8' style='border:0; width:120px; height:60px;'></iframe>
-            </div>
-        </div>
-
-        <div class="side-ads">
-            <iframe data-aa='2434954' src='https://ad.a-ads.com/2434954?size=160x600&r=9' style='border:0; width:160px; height:600px;'></iframe>
-            <iframe data-aa='2434954' src='https://ad.a-ads.com/2434954?size=160x600&r=10' style='border:0; width:160px; height:600px;'></iframe>
-        </div>
+    <div class="ad-slot">
+        <h3>Ad Unit 2434952</h3>
+        <iframe data-aa='2434952' src='https://ad.a-ads.com/2434952?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
     </div>
 
-    <div class="ad-footer">
-        <iframe data-aa='2434952' src='https://ad.a-ads.com/2434952?size=728x90&r=11' style='border:0; width:728px; height:90px;'></iframe>
-        <div class="small-ads-row">
-            <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955/?size=120x60&r=12' style='border:0; width:120px; height:60px;'></iframe>
-        </div>
+    <div class="ad-slot">
+        <h3>Ad Unit 2434953</h3>
+        <iframe data-aa='2434953' src='https://ad.a-ads.com/2434953?size=300x250' style='width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
     </div>
 
-</body>
+    <div class="ad-slot">
+        <h3>Ad Unit 2434954</h3>
+        <iframe data-aa='2434954' src='https://ad.a-ads.com/2434954?size=160x600' style='width:160px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
+
+    <div class="ad-slot">
+        <h3>Ad Unit 2434955</h3>
+        <iframe data-aa='2434955' src='https://ad.a-ads.com/2434955?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
+
+    <div style="height: 200px;"></div> </body>
 </html>
