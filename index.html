@@ -3,118 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Dashboard - Analytics</title>
+    <title>Enterprise Analytics Dashboard</title>
     <meta http-equiv="refresh" content="45">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #0f172a; /* Premium Dark Blueish Theme */
-            color: white;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #09090b;
+            color: #e4e4e7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* TOP LEADERBOARD */
-        .top-ad {
+        /* TOP SECTION */
+        .ad-header {
             width: 100%;
-            padding: 20px 0;
-            background: #1e293b;
-            border-bottom: 2px solid #334155;
+            padding: 15px 0;
+            background: #18181b;
+            border-bottom: 1px solid #27272a;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* MAIN CONTENT AREA */
-        .main-wrapper {
+        /* MAIN WRAPPER */
+        .container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
-            margin-top: 20px;
-            gap: 20px;
+            max-width: 1400px;
+            margin: 20px auto;
+            gap: 15px;
         }
 
-        /* SIDEBARS (160x600) */
-        .sidebar {
+        /* SIDEBARS */
+        .side-ads {
             width: 160px;
-            min-height: 600px;
-            background: #1e293b;
-            padding: 10px;
-            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        /* CENTER CONTENT */
-        .content-area {
-            flex-grow: 1;
+        /* MAIN CONTENT */
+        .main-content {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
         }
 
-        h2 { color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* BANNER GRID (300x250) */
-        .grid-container {
+        .grid-300 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
         }
 
-        .banner-box {
-            background: #1e293b;
-            border: 1px solid #475569;
-            border-radius: 8px;
+        .banner-card {
+            background: #18181b;
+            border: 1px solid #27272a;
             padding: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border-radius: 4px;
         }
 
-        /* DUMMY TEXT (To look real) */
-        .dummy-text {
-            color: #94a3b8;
-            font-size: 12px;
-            text-align: center;
-            max-width: 500px;
-            line-height: 1.6;
+        /* FOOTER SECTION */
+        .ad-footer {
+            width: 100%;
+            padding: 20px 0;
+            background: #18181b;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
+
+        h3 { color: #3b82f6; margin: 5px 0; font-size: 14px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
-    <div class="top-ad">
-        <div id="frame" style="width: 728px; z-index: 99998;">
-            <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden; display: block; margin: auto'></iframe>
+    <div class="ad-header">
+        <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden;'></iframe>
+        <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden;'></iframe>
+    </div>
+
+    <div class="container">
+        <div class="side-ads">
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden;'></iframe>
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden;'></iframe>
+        </div>
+
+        <div class="main-content">
+            <h3>Server Node Traffic Monitor</h3>
+            
+            <div class="grid-300">
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+            </div>
+
+            <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; width:728px; height:90px; overflow:hidden;'></iframe>
+
+            <div class="grid-300">
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+                <div class="banner-card"><iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; width:300px; height:250px; overflow:hidden;'></iframe></div>
+            </div>
+        </div>
+
+        <div class="side-ads">
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden;'></iframe>
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden;'></iframe>
         </div>
     </div>
 
-    <div class="main-wrapper">
-        <div class="sidebar">
-            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden; display: block; margin: auto'></iframe>
-        </div>
-
-        <div class="content-area">
-            <h2>System Status: Active</h2>
-            <p class="dummy-text">
-                Your high-speed proxy connection is established. Please wait while the analytics dashboard syncs with the server. Do not close this tab during the process.
-            </p>
-
-            <div class="grid-container">
-                <div class="banner-box">
-                    <iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; padding:0; width:300px; height:250px; overflow:hidden; display: block; margin: auto'></iframe>
-                </div>
-                <div class="banner-box">
-                    <iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; padding:0; width:300px; height:250px; overflow:hidden; display: block; margin: auto'></iframe>
-                </div>
-            </div>
-
-            <p class="dummy-text">Monitoring real-time traffic from global residential nodes...</p>
-        </div>
-
-        <div class="sidebar">
-            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden; display: block; margin: auto'></iframe>
-        </div>
+    <div class="ad-footer">
+        <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden;'></iframe>
+        <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden;'></iframe>
     </div>
 
 </body>
