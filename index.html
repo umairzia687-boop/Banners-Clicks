@@ -2,155 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Premium Content - Ads Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dashboard - Analytics</title>
+    <meta http-equiv="refresh" content="45">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #121212;
+            background: #0f172a; /* Premium Dark Blueish Theme */
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* BANNER SECTION */
-        .ad-section {
+        /* TOP LEADERBOARD */
+        .top-ad {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 0;
-            background: #000;
-        }
-
-        .banner-box {
-            width: 320px;
-            min-height: 50px;
-            background: #1a1a1a;
+            padding: 20px 0;
+            background: #1e293b;
+            border-bottom: 2px solid #334155;
             display: flex;
             justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border: 1px solid #333;
         }
 
-        /* MIDDLE SECTION WITH BUTTONS */
-        .main-portal {
-            flex-grow: 1;
+        /* MAIN CONTENT AREA */
+        .main-wrapper {
+            display: flex;
             width: 100%;
-            max-width: 400px;
-            padding: 30px 20px;
+            max-width: 1200px;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        /* SIDEBARS (160x600) */
+        .sidebar {
+            width: 160px;
+            min-height: 600px;
+            background: #1e293b;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* CENTER CONTENT */
+        .content-area {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            background: #121212;
         }
 
-        h2 { color: #feca57; text-align: center; margin-bottom: 10px; font-size: 1.2rem; }
+        h2 { color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; }
 
-        .smart-btn {
-            width: 100%;
-            padding: 18px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #000;
-            background: linear-gradient(45deg, #feca57, #ff9f43);
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(254, 202, 87, 0.3);
-            transition: transform 0.2s;
+        /* BANNER GRID (300x250) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
-        .smart-btn:active { transform: scale(0.95); }
+        .banner-box {
+            background: #1e293b;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            padding: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
 
-        .btn-2 { background: linear-gradient(45deg, #ff6b6b, #ee5253); color: white; }
-        .btn-3 { background: linear-gradient(45deg, #48dbfb, #2e86de); color: white; }
-
-        /* NATIVE AD CONTAINER */
-        .native-container {
-            width: 100%;
-            max-width: 350px;
-            margin: 10px 0;
+        /* DUMMY TEXT (To look real) */
+        .dummy-text {
+            color: #94a3b8;
+            font-size: 12px;
+            text-align: center;
+            max-width: 500px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <div class="ad-section">
-        <div class="banner-box">
-            <script type="text/javascript">
-                atOptions = { 'key' : '4eafdafc033a151a2e0af11439bc6d7c', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-            </script>
-            <script src="https://www.highperformanceformat.com/4eafdafc033a151a2e0af11439bc6d7c/invoke.js"></script>
-        </div>
-        
-        <div class="native-container">
-            <script async="async" data-cfasync="false" src="https://pl29168849.profitablecpmratenetwork.com/bb0f329112946aab4e3ce32fa2568abe/invoke.js"></script>
-            <div id="container-bb0f329112946aab4e3ce32fa2568abe"></div>
-        </div>
-
-        <div class="banner-box">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'cf595e4187e3828578a01da48c7110e8', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script src="https://www.highperformanceformat.com/cf595e4187e3828578a01da48c7110e8/invoke.js"></script>
+    <div class="top-ad">
+        <div id="frame" style="width: 728px; z-index: 99998;">
+            <iframe data-aa='2434952' src='//ad.a-ads.com/2434952/?size=728x90' style='border:0; padding:0; width:728px; height:90px; overflow:hidden; display: block; margin: auto'></iframe>
         </div>
     </div>
 
-    <div class="main-portal">
-        <h2>PREMIUM CONTENT ACCESS</h2>
-        
-        <button class="smart-btn" onclick="openLink(1)">🚀 DOWNLOAD NOW</button>
-        <button class="smart-btn btn-2" onclick="openLink(2)">💎 GET FREE COINS</button>
-        <button class="smart-btn btn-3" onclick="openLink(3)">📺 WATCH VIDEO</button>
-        
-        <p style="font-size: 10px; color: #555; text-align: center;">Clicking buttons will open sponsor links.</p>
-    </div>
-
-    <div class="ad-section">
-        <div class="banner-box" style="min-height: 250px;">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'cf595e4187e3828578a01da48c7110e8', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script src="https://www.highperformanceformat.com/cf595e4187e3828578a01da48c7110e8/invoke.js"></script>
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden; display: block; margin: auto'></iframe>
         </div>
 
-        <div class="banner-box">
-            <script type="text/javascript">
-                atOptions = { 'key' : '4eafdafc033a151a2e0af11439bc6d7c', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-            </script>
-            <script src="https://www.highperformanceformat.com/4eafdafc033a151a2e0af11439bc6d7c/invoke.js"></script>
+        <div class="content-area">
+            <h2>System Status: Active</h2>
+            <p class="dummy-text">
+                Your high-speed proxy connection is established. Please wait while the analytics dashboard syncs with the server. Do not close this tab during the process.
+            </p>
+
+            <div class="grid-container">
+                <div class="banner-box">
+                    <iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; padding:0; width:300px; height:250px; overflow:hidden; display: block; margin: auto'></iframe>
+                </div>
+                <div class="banner-box">
+                    <iframe data-aa='2434953' src='//ad.a-ads.com/2434953/?size=300x250' style='border:0; padding:0; width:300px; height:250px; overflow:hidden; display: block; margin: auto'></iframe>
+                </div>
+            </div>
+
+            <p class="dummy-text">Monitoring real-time traffic from global residential nodes...</p>
         </div>
 
-        <div class="native-container">
-            <div id="container-bb0f329112946aab4e3ce32fa2568abe"></div>
+        <div class="sidebar">
+            <iframe data-aa='2434954' src='//ad.a-ads.com/2434954/?size=160x600' style='border:0; padding:0; width:160px; height:600px; overflow:hidden; display: block; margin: auto'></iframe>
         </div>
     </div>
-
-    <script>
-        function openLink(btnId) {
-            let url = "";
-            switch(btnId) {
-                case 1:
-                    url = "https://www.profitablecpmratenetwork.com/e0dvj1e6cm?key=379e98e3c72c9fc4c82a24fe553a7e99";
-                    break;
-                case 2:
-                    url = "https://www.profitablecpmratenetwork.com/aic6frd7?key=a3fcbb775a2cba48180dbb9376e8c213";
-                    break;
-                case 3:
-                    url = "https://www.profitablecpmratenetwork.com/ygqvt003ga?key=f341f8a112ff7396caffd005f9f0b2e0";
-                    break;
-            }
-            window.open(url, "_blank");
-        }
-    </script>
 
 </body>
 </html>
